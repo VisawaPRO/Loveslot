@@ -1,0 +1,93 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+.container {
+  margin-top: 60px;
+  position: relative;
+}
+
+.arrows {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  font-size: 60px;
+  color: #e3375b;
+}
+
+.envelope {
+  margin: 30px auto;
+}
+
+.letter {
+  width: 200px;
+  animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.hearts {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 100px;
+  font-size: 40px;
+  color: #e3375b;
+}
+
+.open-button {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 15px 30px;
+  background-color: #ff8ed4;
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.open-button:hover {
+  background-color: #ff66c4;
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #ff66c4;
+}
+
+/* กระพริบ */
+.flash {
+  box-shadow: 0 0 25px #ff66c4;
+}
+
+/* หัวใจลอย */
+.floating-heart {
+  position: fixed;
+  bottom: -20px;
+  font-size: 24px;
+  animation: floatUp 4s linear forwards;
+  pointer-events: none;
+  z-index: 999;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh);
+    opacity: 0;
+  }
+}
